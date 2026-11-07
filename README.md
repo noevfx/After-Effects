@@ -1,28 +1,60 @@
-# After Effects
+# After Effects — ferramentas da Noé VFX
 
-Repositorio oficial de scripts, painéis, extensões e ferramentas de automação para Adobe After Effects.
+Scripts, painéis e uma ponte de IA para o **Adobe After Effects**, feitos no dia a dia de produção de vídeo e motion. Tudo aqui é gratuito, sem dependências obscuras, e cada ferramenta tem o seu pacote pronto para instalar.
 
-## Projetos atuais
+> **Não sabe por onde começar?** Instale o **AE Toolkit Panel**: é um painel único com 12 ferramentas de limpeza e organização de projeto. As outras são extras que você instala quando precisar.
 
-### Scripts & Extensões de Produção
-- `AE Toolkit Panel/`: painel único de ScriptUI (encaixável ou janela flutuante) com um conjunto de 12 ferramentas de produção do dia a dia (Tidy, Reduce Project, Remove Unused Footage, Clear Expressions, Reset Layer, Hold Time Remap, Hold Keyframe, Copy/Paste Curve, Layer Normalize, Split Shapes, Precomp Extractor e Layer Organizer).
-- `Layer Direction/`: script e extensão CEP para alinhamento e direção de camadas.
-- `Swatch Colors/`: extensão CEP para extrair, salvar e aplicar paletas da composição ativa.
-- `Text Splitter/`: script para dividir textos em letras, palavras ou linhas.
-- `_Run Scripts/`: biblioteca de utilitários rápidos (Text Swap, Batch Comp, Faux 3D Extrusion, etc.).
+## O que tem aqui
 
-### Automação & MCP Bridge
-- `AE-mcp/`: servidor Model Context Protocol (MCP) e ponte CEP para controle em tempo real do After Effects via agentes de IA.
-  - `ae-mcp-server/`: servidor Node.js MCP.
-  - `cep-bridge/`: painel de comunicação CEP com o After Effects.
-  - Pacote com instalador automatizado: `release/AE MCP/v1.0.0/` e `AE-mcp/release/v1.0.0/`.
+| Ferramenta | Para que serve | Versão | Baixar |
+| :--- | :--- | :--- | :--- |
+| **AE Toolkit Panel** | Painel com 12 ferramentas: organizar projeto, remover footage sem uso, limpar expressões, Time Remap, copiar/colar curvas, dividir shapes e mais | 1.0.5 | [zip](release/AE%20Toolkit%20Panel/v1.0.5/AE-Toolkit-Panel-v1.0.5.zip) |
+| **Layer Direction** | Alinha e dá direção às camadas (rotação apontando para onde o objeto vai) | 1.0.0 | [zip](release/Layer%20Direction/v1.0.0/Layer-Direction-v1.0.0.zip) |
+| **Swatch Colors** | Extrai, salva e aplica paletas de cores da composição ativa | 1.0.3 | [zip](release/Swatch%20Colors/v1.0.3/Swatch-Colors-v1.0.3.zip) |
+| **Text Splitter** | Divide um texto em letras, palavras ou linhas (uma camada para cada) | 1.0.0 | [zip](release/Text%20Splitter/v1.0.0/Text-Splitter-v1.0.0.zip) |
+| **Text Swap** | Troca o texto de várias camadas de uma vez | 1.1.0 | [zip](release/Text%20Swap/v1.1.0/Text-Swap-v1.1.0.zip) |
+| **Precomp Extractor** | Extrai o conteúdo de pré-composições | 1.0.0 | [zip](release/Precomp%20Extractor/v1.0.0/Precomp-Extractor-v1.0.0.zip) |
+| **AE MCP** (ponte de IA) | Deixa assistentes de IA (Claude, Codex) controlarem o After Effects | 1.0.0 | [zip](release/AE%20MCP/v1.0.0/AE-MCP-Bridge-v1.0.0.zip) |
+| **_Run Scripts** | Biblioteca de utilitários rápidos de um clique (Batch Comp, Faux 3D Extrusion, Hold Time Remap…) | — | pasta [`_Run Scripts`](%5FRun%20Scripts) |
 
-## Releases
+## Como instalar (painéis e scripts)
 
-Cada produto tem a sua pasta de versões em `release/<Produto>/vX.Y.Z/` (ordem crescente, nada é sobrescrito). Versões atuais e histórico: [`CHANGELOG.md`](CHANGELOG.md). Como continuar o projeto: [`HANDOFF.md`](HANDOFF.md).
+1. Baixe o `.zip` da ferramenta na tabela acima e extraia.
+2. Rode o instalador que vem dentro (`Install_….bat` no Windows). Se a ferramenta vier só com um arquivo `.jsx`, copie-o para a pasta de scripts do After Effects, em `Support Files/Scripts/ScriptUI Panels`.
+3. Abra o After Effects e vá em **Janela** (painéis) ou **Arquivo → Scripts** (scripts avulsos).
 
-## Diretrizes de Desenvolvimento
+Se o script pedir, ative **Editar → Preferências → Scripting e Expressões → Permitir que scripts gravem arquivos e acessem a rede**.
 
-Antes de alterar qualquer script, consulte `VERSIONING.md`.
+## Ponte de IA (AE MCP)
 
-Sempre siga o versionamento SemVer (`MAJOR.MINOR.PATCH`) e faça commits em português com prefixos semânticos padronizados.
+O **AE MCP** usa o *Model Context Protocol*, um padrão que permite a um assistente de IA chamar ferramentas. Ele tem duas partes que conversam entre si:
+
+```
+Assistente de IA ─▶ servidor MCP (Node.js) ─▶ painel CEP dentro do After Effects ─▶ ExtendScript
+```
+
+O instalador do pacote (`AE-MCP-Instalador`) configura tudo. O código está em [`AE-mcp/`](AE-mcp), com o seu próprio [README](AE-mcp/README.md). **O painel precisa estar aberto dentro do After Effects** para a IA conseguir agir.
+
+## Estrutura do repositório
+
+```text
+After Effects/
+├─ AE Toolkit Panel/ Layer Direction/ Swatch Colors/ Text Splitter/   código de cada ferramenta
+├─ _Run Scripts/                utilitários de um clique
+├─ AE-mcp/                      servidor MCP e painel CEP da ponte de IA
+├─ release/<Ferramenta>/vX.Y.Z/ pacote de cada versão (ordem crescente, nada é sobrescrito)
+├─ CHANGELOG.md                 histórico de versões
+└─ HANDOFF.md  VERSIONING.md    como continuar o projeto e regra de versões
+```
+
+O **CompCAM** (câmera virtual com o celular) é um projeto à parte e não faz parte deste repositório.
+
+## Versões
+
+Seguimos o versionamento `MAJOR.MINOR.PATCH`. O histórico completo está no [CHANGELOG](CHANGELOG.md); a regra, em [VERSIONING.md](VERSIONING.md).
+
+## Contato
+
+Noé VFX — [noevfx.com](https://noevfx.com) · [labs@noevfx.com](mailto:labs@noevfx.com)
+
+Adobe e After Effects são marcas da Adobe. Estas ferramentas são independentes e não são afiliadas nem endossadas pela Adobe.
