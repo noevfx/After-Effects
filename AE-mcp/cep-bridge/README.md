@@ -43,7 +43,7 @@ O servidor MCP e o cliente Claude Code continuam funcionando sem alterações.
 ## Instalação
 
 1. **Backup + desativação do script antigo** (já feito nesta máquina):
-   - Backup em `D:\_Claude\AE-mcp\backups\ae-bridge.jsx.<timestamp>.bak`
+   - Backup em `D:\Noe VFX\.Labs\After Effects\AE-mcp\backups\ae-bridge.jsx.<timestamp>.bak`
    - Original renomeado para:
      `C:\Program Files\Adobe\Adobe After Effects 2026\Support Files\Scripts\Startup\ae-bridge.jsx.disabled`
    - (requer permissão de administrador, pois fica em Program Files)
@@ -53,7 +53,7 @@ O servidor MCP e o cliente Claude Code continuam funcionando sem alterações.
    ```powershell
    $dest = "$env:APPDATA\Adobe\CEP\extensions\com.aemcp.bridge"
    New-Item -ItemType Directory -Path $dest -Force
-   Copy-Item -Path "D:\_Claude\AE-mcp\cep-bridge\*" -Destination $dest -Recurse -Force
+   Copy-Item -Path "D:\Noe VFX\.Labs\After Effects\AE-mcp\cep-bridge\*" -Destination $dest -Recurse -Force
    ```
 
 3. **Habilitar modo debug do CEP** (necessário porque a extensão não é

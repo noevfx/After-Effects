@@ -2,3 +2,15 @@
 Thumbs.db
 node_modules/
 *.log
+
+# CompCAM tem repositório próprio (privado)
+/CompCAM/
+
+# Backups locais de versões (política de releases: ver D:\.IA agents\global\RELEASES.md)
+_backups/
+
+# _Run Scripts: terceiros e arquivos pessoais ficam só localmente, fora do repositório público
+/_Run Scripts/ParentAlign_v4.jsx
+/_Run Scripts/Scale Composition.jsx
+/_Run Scripts/Scale Selected Layers.jsx
+/_Run Scripts/_EasyCurveClipboard.txt

@@ -42,7 +42,7 @@ export async function runExtendScript(scriptBody) {
     }
     // Aguarda o After Effects processar e responder
     const startTime = Date.now();
-    const timeoutMs = 8000;
+    const timeoutMs = 30000;
     while (Date.now() - startTime < timeoutMs) {
         for (const dir of BRIDGE_DIRS) {
             const resultPath = path.join(dir, "result.json");

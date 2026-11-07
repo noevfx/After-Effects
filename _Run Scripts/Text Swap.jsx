@@ -1,7 +1,7 @@
 /*
     Text Swap
     Version: 1.1.0
-    Author: Eduardo Noe
+    Author: Noé VFX
 
     Encadeia N layers de texto (textos e fontes diferentes) numa unica layer
     "Text Swap", trocando texto + estilo unidade a unidade (caractere, palavra

@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Temporary Bridge Files
+.ae_bridge/
+*.log
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Backups locais de versões (política de releases: ver D:\.IA agents\global\RELEASES.md)
+_backups/

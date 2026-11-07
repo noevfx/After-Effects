@@ -1,4 +1,4 @@
-# Scripts-AE
+# After Effects
 
 Repositorio oficial de scripts, painéis, extensões e ferramentas de automação para Adobe After Effects.
 
@@ -9,7 +9,6 @@ Repositorio oficial de scripts, painéis, extensões e ferramentas de automaçã
 - `Layer Direction/`: script e extensão CEP para alinhamento e direção de camadas.
 - `Swatch Colors/`: extensão CEP para extrair, salvar e aplicar paletas da composição ativa.
 - `Text Splitter/`: script para dividir textos em letras, palavras ou linhas.
-- `Precomp Extractor/`: script standalone de extração de pré-composições preservando transformações.
 - `_Run Scripts/`: biblioteca de utilitários rápidos (Text Swap, Batch Comp, Faux 3D Extrusion, etc.).
 
 ### Automação & MCP Bridge
@@ -17,11 +16,15 @@ Repositorio oficial de scripts, painéis, extensões e ferramentas de automaçã
   - `ae-mcp-server/`: servidor Node.js MCP.
   - `cep-bridge/`: painel de comunicação CEP com o After Effects.
   - `skill/`: skill `after_effects_controller` para o agente.
-  - `AE-MCP-Instalador-Completo.zip`: pacote com instalador automatizado.
+  - Pacote com instalador automatizado: `release/AE MCP/v1.0.0/AE-MCP-Bridge-v1.0.0.zip`.
+
+### Outros projetos nesta pasta (repositórios próprios)
+- `CompCAM/`: câmera virtual para After Effects (app Android + painel CEP + ponte), versão `0.1.0`.
+- `AE-mcp/`: cópia antiga do MCP (o oficial é `mcp/`).
 
 ## Releases
 
-Versões estáveis empacotadas para cada script e extensão individual estão disponíveis na aba [Releases](https://github.com/eduardonoe/Scripts-AE/releases).
+Cada produto tem a sua pasta de versões em `release/<Produto>/vX.Y.Z/` (ordem crescente, nada é sobrescrito). Versões atuais e histórico: [`CHANGELOG.md`](CHANGELOG.md). Como continuar o projeto: [`HANDOFF.md`](HANDOFF.md). Os pacotes também estão na aba [Releases](https://github.com/noevfx/After-Effects/releases) do GitHub.
 
 ## Diretrizes de Desenvolvimento
 

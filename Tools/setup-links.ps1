@@ -31,16 +31,13 @@ $scriptUIDir = "C:\Program Files\Adobe\Adobe After Effects 2026\Support Files\Sc
 $cepLinks = @{
     "Swatch Colors"  = Join-Path $repoRoot "Swatch Colors\CEP Extension\Swatch Colors"
     "Layer Direction" = Join-Path $repoRoot "Layer Direction\CEP Extension\Layer Direction CEP Extension"
-    "Momentum"        = Join-Path $repoRoot "Momentum\CEP Extension\Momentum"
 }
 
 # nome do arquivo no ScriptUI Panels -> caminho do .jsx no repo
 $jsxLinks = @{
     "Text Splitter.jsx"      = Join-Path $repoRoot "Text Splitter\Text Splitter.jsx"
-    "Precomp Extractor.jsx"  = Join-Path $repoRoot "Precomp Extractor\Precomp Extractor.jsx"
     "Layer Direction.jsx"    = Join-Path $repoRoot "Layer Direction\Layer Direction.jsx"
     "Swatch Colors.jsx"      = Join-Path $repoRoot "Swatch Colors\Swatch Colors.jsx"
-    "Momentum.jsx"           = Join-Path $repoRoot "Momentum\Momentum.jsx"
 }
 
 Write-Host "=== Linkando extensoes CEP ==="

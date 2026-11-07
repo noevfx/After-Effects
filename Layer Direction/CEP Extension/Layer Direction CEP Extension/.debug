@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ExtensionList>
-    <Extension Id="com.eduardo.layerdirection.panel">
+    <Extension Id="com.noevfx.layerdirection.panel">
         <HostList>
             <Host Name="AEFT" Port="8092" />
         </HostList>
