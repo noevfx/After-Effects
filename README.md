@@ -12,25 +12,17 @@ Repositorio oficial de scripts, painéis, extensões e ferramentas de automaçã
 - `_Run Scripts/`: biblioteca de utilitários rápidos (Text Swap, Batch Comp, Faux 3D Extrusion, etc.).
 
 ### Automação & MCP Bridge
-- `mcp/`: servidor Model Context Protocol (MCP) e ponte CEP para controle em tempo real do After Effects via agentes de IA.
+- `AE-mcp/`: servidor Model Context Protocol (MCP) e ponte CEP para controle em tempo real do After Effects via agentes de IA.
   - `ae-mcp-server/`: servidor Node.js MCP.
   - `cep-bridge/`: painel de comunicação CEP com o After Effects.
-  - `skill/`: skill `after_effects_controller` para o agente.
-  - Pacote com instalador automatizado: `release/AE MCP/v1.0.0/AE-MCP-Bridge-v1.0.0.zip`.
-
-### Outros projetos nesta pasta (repositórios próprios)
-- `CompCAM/`: câmera virtual para After Effects (app Android + painel CEP + ponte), versão `0.1.0`.
-- `AE-mcp/`: cópia antiga do MCP (o oficial é `mcp/`).
+  - Pacote com instalador automatizado: `release/AE MCP/v1.0.0/` e `AE-mcp/release/v1.0.0/`.
 
 ## Releases
 
-Cada produto tem a sua pasta de versões em `release/<Produto>/vX.Y.Z/` (ordem crescente, nada é sobrescrito). Versões atuais e histórico: [`CHANGELOG.md`](CHANGELOG.md). Como continuar o projeto: [`HANDOFF.md`](HANDOFF.md). Os pacotes também estão na aba [Releases](https://github.com/noevfx/After-Effects/releases) do GitHub.
+Cada produto tem a sua pasta de versões em `release/<Produto>/vX.Y.Z/` (ordem crescente, nada é sobrescrito). Versões atuais e histórico: [`CHANGELOG.md`](CHANGELOG.md). Como continuar o projeto: [`HANDOFF.md`](HANDOFF.md).
 
 ## Diretrizes de Desenvolvimento
 
-Antes de alterar qualquer script, consulte:
-1. `VERSIONING.md`
-2. `AGENTS.md`
-3. `CLAUDE.md`
+Antes de alterar qualquer script, consulte `VERSIONING.md`.
 
 Sempre siga o versionamento SemVer (`MAJOR.MINOR.PATCH`) e faça commits em português com prefixos semânticos padronizados.

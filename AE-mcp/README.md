@@ -2,7 +2,7 @@
 
 Controle o Adobe After Effects por agentes de IA (Claude Code, Codex, Antigravity) via **Model Context Protocol**. Versão **1.0.0**.
 
-> **Atenção:** esta pasta é a cópia **independente e mais antiga** do MCP. O conteúdo é o mesmo de `..\mcp\` (repositório After-Effects, onde o MCP foi unificado em 2026-10-20). Hoje o Claude Code e o Codex apontam para **esta** pasta (`ae-mcp-server\dist\index.js`). Ver "Pendências" no [`HANDOFF.md`](HANDOFF.md).
+> Este é o **MCP oficial** do After Effects. O Claude Code e o Codex apontam para esta pasta (`ae-mcp-server/dist/index.js`).
 
 ## Como funciona
 

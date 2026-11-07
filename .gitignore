@@ -14,3 +14,9 @@ _backups/
 /_Run Scripts/Scale Composition.jsx
 /_Run Scripts/Scale Selected Layers.jsx
 /_Run Scripts/_EasyCurveClipboard.txt
+
+# Arquivo local e instruções de agentes ficam só no computador
+_Arquivo/
+AGENTS.md
+CLAUDE.md
+.agents/

@@ -1,2 +1,0 @@
-Precomp Extractor e um script de comando unico (run script), sem interface, e faz parte do AE Toolkit Panel.
-A copia em uso fica em ..\_Run Scripts\Precomp Extractor.jsx (identica, SHA-256 c40f5cda...). Esta pasta isolada era duplicata, arquivada em 06/11/2026.
